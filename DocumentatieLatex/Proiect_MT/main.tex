@@ -1,0 +1,88 @@
+\documentclass[color]{tumphthesis}
+
+
+
+\usepackage{graphicx}       % Pachet pentru imagini
+\usepackage{caption}        % Legende pentru figuri
+\usepackage{subcaption}     % Subfiguri pentru matricea de imagini
+\usepackage{natbib}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage{glossaries}
+\usepackage[romanian]{babel}
+\usepackage[hyphens]{url}
+
+\usepackage{listings}        % Suport pentru afisarea codului sursă
+\usepackage{xcolor}          % Pentru culori personalizate în cod
+
+% Definirea stilului pentru cod sursă
+\lstdefinestyle{arduino}{
+    language=C++,                   % Limba folosită (C++ pentru Arduino)
+    basicstyle=\ttfamily\small,     % Font monospaced mic
+    keywordstyle=\color{blue},      % Cuvinte cheie în albastru
+    commentstyle=\color{gray},      % Comentarii în gri
+    stringstyle=\color{green!70!black}, % Șiruri de caractere verzi
+    numberstyle=\tiny\color{gray},  % Numerele de linie în gri mic
+    numbers=left,                   % Numerotare pe marginea stângă
+    stepnumber=1,                    % Fiecare linie numerotată
+    showstringspaces=false,         % Nu arată spațiile în șiruri
+    tabsize=2,                      % Dimensiunea tab-urilor
+    breaklines=true,                % Rupe liniile prea lungi
+    breakatwhitespace=false,        % Rupe liniile chiar și la cuvinte
+    frame=lines,                    % Linie de cadru deasupra și dedesubt
+}
+
+
+%in lco te chapter e capitol
+%\renewcommand{\chaptername}{Capitolul}
+
+%se creeaza lista de abrevieri
+\renewcommand{\glossarysection}[2][]{}
+\makenoidxglossaries
+\input{abreviations}
+
+\setlength{\parindent}{0pt}    % Elimină indentarea paragrafelor
+\setlength{\parskip}{10pt}     % Adaugă 10pt spațiu între paragrafe
+
+\thesistitle
+{Inovații în Prepararea Ceaiului: Controlul Infuziei prin Microcontroller}
+{Controlul Infuziei prin Microcontroller}
+\thesisauthor{Denisa-Maria GOREA}{Denisa-Maria GOREA}
+\thesisdate{2024}{12}{25}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\abstractpage
+\input{abstract}
+
+\tableofcontents
+
+
+%se printeaza lista de abrevieri cu titlu pus de mine 
+\abreviations
+\printnoidxglossaries
+
+\mainmatter\setcounter{page}{1}
+\include{chap1}
+\include{chap2}
+\include{chap3}
+
+
+\include{Bibliography}
+
+\appendix
+\include{app1}
+\include{app2}
+\addcontentsline{toc}{chapter}{\protect Lista de Figuri}
+\listoffigures
+
+
+
+
+
+
+\end{document}

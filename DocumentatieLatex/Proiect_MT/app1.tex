@@ -1,0 +1,65 @@
+\chapter{Codul Sursă}
+\label{cha:app1}
+
+\begin{lstlisting}[style=arduino, caption={}]
+    #include <Servo.h>
+    
+    // Definitii pini
+    int WhiteLedPin = 5;           // Pin pentru LED-ul alb
+    int RedLedPin = 6;             // Pin pentru LED-ul rosu
+    int GreenLedPin = 7;           // Pin pentru LED-ul verde
+    int CountButtonPin = 15;       // Buton pentru numarare apasari
+    int StartButtonPin = 14;       // Buton pentru pornirea procesului
+    int UpWhiteButtonPin = 16;     // Buton pentru miscarea motorului in sus
+    int DownRedButtonPin = 17;     // Buton pentru miscarea motorului in jos
+    int ServoPin = 11;             // Pin de control pentru servo
+    
+    // Variabile
+    Servo myServo;                  // Obiect servo
+    int cnt = 0;                     // Contor pentru apasarile butonului
+    int min = 0;                     // Durata procesului calculata pe baza apasarilor
+    int starePinCountButton = 0;     // Stare pentru debouncing la butonul de numarare
+    int starePinStartButton = 0;     // Stare pentru debouncing la butonul de start
+    int starePinUpWhiteButton = 0;   // Stare pentru debouncing la butonul alb
+    int starePinDownRedButton = 0;   // Stare pentru debouncing la butonul rosu
+    int white = 1;                   // Starea LED-ului alb
+    int start = 0;                   // Indicator pentru proces in desfasurare
+    
+    void setup() {
+      // Configurare pini
+      pinMode(WhiteLedPin, OUTPUT);
+      pinMode(RedLedPin, OUTPUT);
+      pinMode(GreenLedPin, OUTPUT);
+    
+      pinMode(CountButtonPin, INPUT);
+      pinMode(StartButtonPin, INPUT);
+      pinMode(UpWhiteButtonPin, INPUT);
+      pinMode(DownRedButtonPin, INPUT);
+    
+      // Initializare servo
+      myServo.attach(ServoPin);             // Ataseaza servo-ul la pin
+      myServo.writeMicroseconds(1500);      // Pozitie neutra (stop)
+    
+      // Stare initiala a LED-urilor
+      digitalWrite(WhiteLedPin, HIGH);      // LED-ul alb ON initial
+      digitalWrite(GreenLedPin, LOW);
+      digitalWrite(RedLedPin, LOW);
+    }
+    
+    void loop() {
+      whiteLed();                     // Controleaza starea LED-ului alb
+      if (start == 0) counting();     // Numara apasarile butonului cand procesul nu este pornit
+    
+      // Control pentru UpWhiteButton - Miscare in sens orar cat timp butonul este apasat
+      if (digitalRead(UpWhiteButtonPin) == HIGH) {
+         starePinUpWhiteButton = 1;              // Stare buton activata
+         myServo.writeMicroseconds(1200);       // Misca servo-ul in sens orar
+         delay(20);
+      }  else {
+          starePinUpWhiteButton = 0;
+          myServo.writeMicroseconds(1500);      // Opreste servo-ul cand butonul este eliberat
+      }
+    }
+    \end{lstlisting}
+    
+

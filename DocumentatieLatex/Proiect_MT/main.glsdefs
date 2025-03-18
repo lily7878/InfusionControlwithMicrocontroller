@@ -1,0 +1,56 @@
+\glsdefs@newdocentry{CDR}%
+{%
+name={\textbf {CDR}},%
+sort={\textbf {CDR}},%
+type={main},%
+first={\protect \textbf  {CDR}},%
+firstplural={\protect \textbf  {CDR}s},%
+text={\protect \textbf  {CDR}},%
+plural={\protect \textbf  {CDR}s},%
+description={Critical Design Review},%
+descriptionplural={Critical Design Review},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{FVT}%
+{%
+name={\textbf {FVT}},%
+sort={\textbf {FVT}},%
+type={main},%
+first={\protect \textbf  {FVT}},%
+firstplural={\protect \textbf  {FVT}s},%
+text={\protect \textbf  {FVT}},%
+plural={\protect \textbf  {FVT}s},%
+description={Functional Validation Test-bench},%
+descriptionplural={Functional Validation Test-bench},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+

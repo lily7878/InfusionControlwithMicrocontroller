@@ -73,39 +73,8 @@ This project automates tea preparation using a mini-crane controlled by an ATmeg
 
 ---
 
-## 🚩 Limitări / Known Limitations
-
-- ❌ **RO:** Lipsa senzorilor de poziție  
-  **EN:** No position sensor for precise bag control
-
-- ❌ **RO:** Lipsa monitorizării temperaturii sau greutății  
-  **EN:** No temperature or weight monitoring
-
-- ❌ **RO:** Fără control wireless (Bluetooth/Wi-Fi)  
-  **EN:** No wireless control (Bluetooth/Wi-Fi)
-
-- ❌ **RO:** Macaraua are un design simplu, de jucărie  
-  **EN:** Crane uses a toy-grade structure
-
----
-
-## 🎯 Îmbunătățiri Viitoare / Future Improvements
-
-- Integrarea unui senzor de temperatură / Add a temperature sensor  
-- Conectivitate wireless (Bluetooth/Wi-Fi) / Add wireless control  
-- Design mecanic îmbunătățit prin imprimare 3D / Improve crane with 3D printing  
-- Adăugarea senzorilor de poziție și greutate / Add position & weight sensors
-
----
-
-## 📄 Licență / License
-
-MIT License — free to use, modify, and distribute.
-
----
-
 ## 👩‍💻 Autor / Author
 
 **Denisa-Maria Gorea**  
-Facultatea de Automatică și Informatică Aplicată, Grupa 30122  
+Facultatea de Automatică și Informatică Aplicată
 7 Ianuarie 2025
